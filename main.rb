@@ -49,6 +49,7 @@ module Homebrew
   formula = ENV['INPUT_FORMULA']
   tag = ENV['INPUT_TAG']
   revision = ENV['INPUT_REVISION']
+  nofork = ENV['INPUT_NOFORK']
   force = ENV['INPUT_FORCE']
   livecheck = ENV['INPUT_LIVECHECK']
 
@@ -110,6 +111,7 @@ module Homebrew
          *("--version=#{Version.parse(tag)}" unless is_git),
          *("--tag=#{tag}" if is_git),
          *("--revision=#{revision}" if is_git),
+         *("--no-fork" unless nofork.false?),
          *('--force' unless force.false?),
          formula
   else
@@ -165,6 +167,7 @@ module Homebrew
              *("--version=#{Version.parse(tag)}" unless is_git),
              *("--tag=#{tag}" if is_git),
              *("--revision=#{revision}" if is_git),
+             *("--no-fork" if fork.false?),
              *('--force' unless force.false?),
              formula
       rescue ErrorDuringExecution => e
