@@ -1,6 +1,6 @@
-name: Homebrew bump formula
+name: kpenfound fork of dawidd6 Homebrew bump formula
 description: Bump (update) a Homebrew formula on new project release
-author: dawidd6
+author: kpenfound
 branding:
   icon: arrow-up-circle
   color: yellow
@@ -19,8 +19,8 @@ inputs:
       In livecheck mode, if formula input is empty,
       the Action will check the whole tap.
 
-      Example: dawidd6/tap
-      Example: dawidd6/homebrew-tap
+      Example: kpenfound/tap
+      Example: kpenfound/homebrew-tap
     required: false
   formula:
     description: |

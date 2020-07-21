@@ -20,10 +20,10 @@ jobs:
             tap: dawidd6/test
             tag: v0.1.12
             force: true
-          - formula: test-formula-git-revision
+          - formula: test-formula-git-kpenfound
             tap: dawidd6/test
             tag: v0.3.3
-            revision: c43abd765cf51c06bbcaa5479dc49aab1396989f
+            kpenfound: c43abd765cf51c06bbcaa5479dc49aab1396989f
             force: true
           - formula: test-formula-pypi-url
             tap: dawidd6/test
@@ -40,7 +40,7 @@ jobs:
           tap: ${{matrix.tap}}
           formula: ${{matrix.formula}}
           tag: ${{matrix.tag}}
-          revision: ${{matrix.revision}}
+          kpenfound: ${{matrix.kpenfound}}
           force: ${{matrix.force}}
   test-livecheck-formula:
     runs-on: macos-latest
@@ -55,11 +55,15 @@ jobs:
         uses: ./
         with:
           token: ${{secrets.TOKEN}}
+<<<<<<< HEAD
           message: test
           formula: |
             test-formula-url
             test-formula-git-revision
             test-formula-pypi-url
+=======
+          formula: test-formula-url, test-formula-git-kpenfound
+>>>>>>> Update fork refs
           tap: dawidd6/test
           force: true
           livecheck: true

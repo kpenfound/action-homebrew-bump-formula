@@ -76,13 +76,8 @@ module Homebrew
   # Tap the tap if desired
   brew 'tap', tap unless tap.blank?
 
-  # Append additional PR message
-  message = if message.blank?
-              ''
-            else
-              message + "\n\n"
-            end
-  message += '[`action-homebrew-bump-formula`](https://github.com/dawidd6/action-homebrew-bump-formula)'
+  # Define additional PR message
+  message = '[`action-homebrew-bump-formula`](https://github.com/kpenfound/action-homebrew-bump-formula)'
 
   # Do the livecheck stuff or not
   if livecheck.false?
