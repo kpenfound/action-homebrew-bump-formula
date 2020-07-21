@@ -114,6 +114,7 @@ module Homebrew
          "--message=#{message}",
          *("--version=#{version}" unless is_git),
          *("--url=#{url}" unless is_git),
+         *("--version #{Version.parse(tag)}" unless is_git),
          *("--tag=#{tag}" if is_git),
          *("--revision=#{revision}" if is_git),
          *('--force' unless force.false?),
@@ -162,7 +163,10 @@ module Homebrew
              '--no-audit',
              '--no-browse',
              "--message=#{message}",
-             "--version=#{version}",
+             *("--url=#{url}" unless is_git),
+             *("--version #{Version.parse(tag)}" unless is_git),
+             *("--tag=#{tag}" if is_git),
+             *("--revision=#{revision}" if is_git),
              *('--force' unless force.false?),
              formula
       rescue ErrorDuringExecution => e
