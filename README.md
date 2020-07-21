@@ -41,6 +41,8 @@ The Action will extract all needed informations by itself, you just need to spec
     tag: ${{github.ref}}
     # Optional, will be determined automatically
     revision: ${{github.sha}}
+    # Optional, to pass --no-fork to brew
+    nofork: true # false
     # Optional, if don't want to check for already open PRs
     force: false # true
 ```
@@ -63,6 +65,8 @@ If there are no outdated formulae, the Action will just exit.
     tap: USER/REPO
     # Bump only these formulae if outdated
     formula: FORMULA-1, FORMULA-2, FORMULA-3, ...
+    # Optional, to pass --no-fork to brew
+    nofork: true # false
     # Optional, if don't want to check for already open PRs
     force: false # true
     # Need to set this input if want to use `brew livecheck`

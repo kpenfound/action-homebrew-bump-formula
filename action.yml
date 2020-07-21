@@ -53,6 +53,9 @@ inputs:
       Example: 130d3a3af72f66780ae4e24cd143ae7a4d757f9d
     required: false
     default: ${{github.sha}}
+  nofork:
+    description: Pass --no-fork to brew
+    required: false
   force:
     description: Check open PRs or not (will fail if detected)
     required: false
