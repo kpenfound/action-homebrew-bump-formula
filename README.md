@@ -69,8 +69,8 @@ If there are no outdated formulae, the Action will just exit.
 
 ## Examples
 
-- https://github.com/kpenfound/action-homebrew-bump-formula/blob/master/.github/workflows/test.yml
-- https://github.com/kpenfound/ba-bump/blob/master/.github/workflows/bump.yml
+- https://github.com/dawidd6/action-homebrew-bump-formula/blob/master/.github/workflows/test.yml
+- https://github.com/dawidd6/ba-bump/blob/master/.github/workflows/bump.yml
 - https://github.com/ablinov/declutter/blob/master/.github/workflows/bump_homebrew_formula.yml
 - https://github.com/jesseduffield/lazygit/blob/master/.github/workflows/cd.yml
 - https://github.com/stephan-hesselmann-by/homebrew-BlueYonder/blob/master/.github/workflows/update-tap.yml
