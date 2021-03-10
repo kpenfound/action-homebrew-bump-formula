@@ -40,14 +40,14 @@ module Homebrew
   end
 
   # Get inputs
-  token = ENV['INPUT_TOKEN']
-  tap = ENV['INPUT_TAP']
-  formula = ENV['INPUT_FORMULA']
-  tag = ENV['INPUT_TAG']
-  revision = ENV['INPUT_REVISION']
-  nofork = ENV['INPUT_NOFORK']
-  force = ENV['INPUT_FORCE']
-  livecheck = ENV['INPUT_LIVECHECK']
+  token = ENV['HOMEBREW_GITHUB_API_TOKEN']
+  tap = ENV['HOMEBREW_BUMP_TAP']
+  formula = ENV['HOMEBREW_BUMP_FORMULA']
+  tag = ENV['HOMEBREW_BUMP_TAG']
+  revision = ENV['HOMEBREW_BUMP_REVISION']
+  nofork = ENV['HOMEBREW_BUMP_NOFORK']
+  force = ENV['HOMEBREW_BUMP_FORCE']
+  livecheck = ENV['HOMEBREW_BUMP_LIVECHECK']
 
   # Set needed HOMEBREW environment variables
   ENV['HOMEBREW_GITHUB_API_TOKEN'] = token

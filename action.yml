@@ -83,3 +83,4 @@ runs:
         HOMEBREW_BUMP_REVISION: ${{inputs.revision}}
         HOMEBREW_BUMP_FORCE: ${{inputs.force}}
         HOMEBREW_BUMP_LIVECHECK: ${{inputs.livecheck}}
+        HOMEBREW_BUMP_NOFORK: ${{inputs.nofork}}
